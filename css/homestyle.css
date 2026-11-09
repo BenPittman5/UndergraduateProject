@@ -1,20 +1,76 @@
-
+/* For logo top left */
+#logo {
+    float: left;
+}
+/* For title text */
 #title {
-    font-size: 45px;
+    font-size: 3vw;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
 }
-
+*/ For version text */
 #version {
-    font-size: 10px;
+    font-size: 0.7vw;
 }
 
-#sidebar {
-    width: 20%;
-    float: left;
-}
-
+/* For main content box area */
 #maincontent {
-    width: 80%;
-    float: left;
+    width: auto;
+    margin: auto; /* Center the main content */
+    box-sizing: border-box;
+    grid-column: 2; /* Place the main content in the second column of the grid */
 }
+
+/* For user input box */
+#userinput {
+    width: 100%;
+    padding: 1%;
+    box-sizing: border-box;
+    border: 1px solid #D3D3D3;
+    border-radius: 150px;
+    background-color: #000000;
+    color: #ffffff;
+}
+
+*/ For individual sidebar items */
+.sidebaritem {
+    width: 100%;
+    color: inherit;
+}
+
+*/For the whole sidebar segment */
+#sidebar {
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #D3D3D3;
+    border-left: none;
+    grid-column: 1; /*Place the sidebar in the first column only*/
+}
+
+*/ For the whole title bar segment */
+#titlebar {
+    background-color: #000000;
+    color: #ffffff;
+    border-bottom: 2px solid #D3D3D3;
+    grid-column: 1 / span 3; /* Make the title bar span all 3 columns of the grid */
+}
+
+*/ The whole page body */
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* Defining a grid layout for the web page */
+/* Container is the id of the body tag */
+#container {
+    display:grid; /* Use CSS Grid layout (2d defined layout) as opposed to flexbox (1d) */
+    grid-template-columns: 1fr 4fr 1fr; /* Define 3 total columns in the web page with the fr being the fractional widths of each */
+    grid-template-rows: auto 1fr; /* Define 2 total rows in the web page with the first row being auto sized and the second row taking up the remaining space */
+}
+
+
+
+
+/* Look into tooltips for sidebar items when created */
